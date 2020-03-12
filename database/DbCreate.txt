@@ -1,111 +1,33 @@
 /* Create Database Rented - NEED NOT NULL STATEMENTS FOR VITAL ID'S */
-
-CREATE TABLE user_type(
-user_type_id int,
-user_type varchar(50),
-PRIMARY KEY (user_type_id)
-);
-
-CREATE INDEX IDX_user_type_id
-ON user_type (user_type_id);
-
 CREATE TABLE user(
-user_id int,
-first_name varchar(50),
-last_name varchar(50),
-address varchar(50),
-phone_number varchar(50),
-email varchar(50),
-user_type_id int,
-PRIMARY KEY (user_id),
-FOREIGN KEY (user_type_id) REFERENCES user_type(user_type_id)
+user_id int
 );
 
 CREATE INDEX IDX_user_id
 ON user (user_id);
 
-CREATE TABLE login(
-user_id int NOT NULL,
-username varchar(50),
-password varchar(50),
-PRIMARY KEY (user_id),
-FOREIGN KEY (user_id) REFERENCES user(user_id)
-);
-
-CREATE INDEX IDX_user_id
-ON login (user_id);
-
-CREATE TABLE tool_classification(
-tool_classification_id int,
-tool_classification varchar(50),
-PRIMARY KEY (tool_classification_id)
-);
-
-CREATE INDEX IDX_tool_classification_id
-ON tool_classification (tool_classification_id);
-
-CREATE TABLE tool_detail(
-tool_detail_id int,
-tool_classification_id int,
-tool_brand varchar(50),
-trade_name varchar(50),
-FOREIGN KEY (tool_classification_id) REFERENCES tool_classification(tool_classification_id),
-PRIMARY KEY (tool_detail_id)
-);
-
-CREATE INDEX IDX_tool_detail_id
-ON tool_detail (tool_detail_id);
-
-CREATE TABLE tool_condition(
-tool_condition_id int,
-tool_condition varchar(50),
-PRIMARY KEY (tool_condition_id)
-);
-
-CREATE INDEX IDX_tool_condition_id
-ON tool_condition (tool_condition_id);
-
 CREATE TABLE tool(
 tool_id int,
-tool_detail_id int,
-tool_condition_id int,
-PRIMARY KEY (tool_id),
-FOREIGN KEY (tool_detail_id) REFERENCES tool_detail(tool_detail_id),
-FOREIGN KEY (tool_condition_id) REFERENCES tool_condition(tool_condition_id)
+tool_classification varchar(50),
+tool_brand varchar(50),
+trade_name varchar(50),
+tool_condition varchar(50),
+PRIMARY KEY (tool_id)
 );
 
 CREATE INDEX IDX_tool_id
 ON tool (tool_id);
 
-CREATE TABLE rented(
+CREATE TABLE rental(
 user_id int,
 tool_id int,
 start_date date, 
 due_date date,
 rental_status int,
-PRIMARY KEY (user_id, tool_ID),
-FOREIGN KEY (user_id) REFERENCES User(user_id),
-FOREIGN KEY (tool_id) REFERENCES Tool(tool_id)
+PRIMARY KEY (user_id, tool_id),
+FOREIGN KEY (user_id) REFERENCES user(user_id),
+FOREIGN KEY (tool_id) REFERENCES tool(tool_id)
 );
 
-CREATE INDEX IDX_user_id
-ON rented (user_id, tool_id);
-
-/*
-CREATE VIEW view_tools AS
-SELECT * FROM tool_classification NATURAL JOIN tool_detail;
-
-CREATE TABLE tool_viewer(
-tool_viewer_id int,
-tool_classification_id int,
-tool_classification varchar(50),
-tool_detail_id int,
-tool_brand varchar(50),
-trade_name varchar(50),
-PRIMARY KEY (tool_viewer_id),
-FOREIGN KEY (tool_classification_id) REFERENCES tool_classification(tool_classification_id),
-FOREIGN KEY (tool_classification) REFERENCES tool_classification(tool_classification),
-FOREIGN KEY (tool_detail_id) REFERENCES tool_detail(tool_detail_id),
-FOREIGN KEY (tool_brand) REFERENCES tool_detail(tool_brand),
-FOREIGN KEY (trade_name) REFERENCES tool_detail(tool_brand);
-*/
+CREATE INDEX IDX_rental
+ON rental (user_id, tool_id);
