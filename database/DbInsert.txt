@@ -1,0 +1,135 @@
+/* Insert statements for metadata */
+
+INSERT INTO user_type
+(user_type_id, user_type)
+VALUES	(2201, 'Admin'),
+	(2202, 'NewClient'),
+	(2203, 'OldClient');
+
+INSERT INTO user
+(user_id, first_name, last_name, address, phone_number, email, user_type_id)
+VALUES	(0001, 'andrew', 'Ortiz', '100 carlson', '9519708743', 'andrewportiz93@gmail.com', 2201),
+	(0002, 'shannon', 'Fisher', '200 carlson', '6120001111', 'shannon@gmail.com', 2201),
+	(0003, 'hana', 'Biadgilgn', '300 carlson', '6129877487', 'hana@gmail.com', 2201),		(0004, 'samara', 'Garrett', '400 carlson', '6121112222', 'samara@gmail.com', 2201),
+	(0005, 'derrick', 'Harper', '500 carlson', '6514426586', 'derrick@gmail.com', 2201),
+	(0006, 'userFirst06', 'userLast06', '600 carlson', '8392840283', 'user06@gmail.com', 2203),	(0007, 'userFirst07', 'userLast07', '700 carlson', '0185622703', 'user07@gmail.com', 2203),
+	(0008, 'userFirst08', 'userLast08', '800 carlson', '3832928373', 'user08@gmail.com', 2203),
+	(0009, 'userFirst09', 'userLast09', '900 carlson', '9519708743', 'user09@gmail.com', 2203),
+	(0010, 'userFirst10', 'userLast10', '1000 carlson', '951943433', 'user10@gmail.com', 2203),
+	(0011, 'userFirst11', 'userLast11', '1100 carlson', '1234567893', 'user11@gmail.com', 2202),
+	(0012, 'userFirst12', 'userLast12', '1200 carlson', '9543243242', 'user12@gmail.com', 2202),
+	(0013, 'userFirst13', 'userLast13', '1300 carlson', '9765765765', 'user13@gmail.com', 2202),
+	(0014, 'userFirst14', 'userLast14', '1400 carlson', '9519454675', 'user14@gmail.com', 2202),
+	(0015, 'userFirst15', 'userLast15', '1500 carlson', '8766645684', 'user15@gmail.com', 2202),
+	(0016, 'userFirst16', 'userLast16', '1600 carlson', '6547854389', 'user16@gmail.com', 2203),
+	(0017, 'userFirst17', 'userLast17', '1700 carlson', '0199387290', 'user17@gmail.com', 2203),
+	(0018, 'userFirst18', 'userLast18', '1800 carlson', '9515454325', 'user18@gmail.com', 2203),
+	(0019, 'userFirst19', 'userLast19', '1900 carlson', '9515453256', 'user19@gmail.com', 2202),
+	(0020, 'userFirst20', 'userLast20', '2000 carlson', '9519854643', 'user20@gmail.com', 2203);
+
+INSERT INTO login
+(user_id, username, password)
+VALUES	(0001, 'USERandrew', 'Tool01'),
+	(0002, 'USERshannon', 'Tool02'),
+	(0003, 'USERhana', 'Tool03'),
+	(0004, 'USERsamara', 'Tool04'),
+	(0005, 'USERderrick','Tool05'),
+	(0006, 'user06', 'Tool06'),
+	(0007, 'user07', 'Tool07'),
+	(0008, 'user08', 'Tool08'),
+	(0009, 'user09', 'Tool09'),
+	(0010, 'user10', 'Tool10'),
+	(0011, 'user11', 'Tool11'),
+	(0012, 'user12', 'Tool12'),
+	(0013, 'user13', 'Tool13'),
+	(0014, 'user14', 'Tool14'),
+	(0015, 'user15', 'Tool15'),
+	(0016, 'user16', 'Tool16'),
+	(0017, 'user17', 'Tool17'),
+	(0018, 'user18', 'Tool18'),
+	(0019, 'user19', 'Tool19'),
+	(0020, 'user20', 'Tool20');
+
+INSERT INTO tool_classification
+(tool_classification_id, tool_classification)
+VALUES	(101, 'Hammer'),
+	(102, 'Wrench'),
+	(103, 'Saw'),
+	(104, 'Power'),
+	(105, 'Chisel');
+
+INSERT INTO tool_detail
+(tool_detail_id, tool_classification_id, tool_brand, trade_name)
+VALUES	(9901, 101, 'SnapOn', 'Clawhammer'),
+	(9902, 102, 'MatCO', 'CrescentWrench'),
+	(9903, 103, 'Ideal', 'DemoSaw'),
+	(9904, 104, 'Dewalt', 'Router'),
+	(9905, 105, 'Hitatchi', 'HandChisel'),
+	(9906, 101, 'Ideal', 'Mallet'),
+	(9907, 102, 'SnapOn', 'CrescentWrench'),
+	(9908, 103, 'SnapOn', 'BandSaw'),
+	(9909, 104, 'BlackAndDecker', 'Drill'),
+	(9910, 105, 'IRWIN', 'Trowel'),
+	(9911, 101, 'United', 'FinishHammer'),
+	(9912, 102, 'ToolCO', 'SpudWrench'),
+	(9913, 103, 'SnapON', 'Hand_Saw'),
+	(9914, 104, 'Ideal', 'ImpactWrench'),
+	(9915, 105, 'Chevron', 'HandChisel'),
+	(9916, 101, 'Metabo', 'BallPeenHammer'),
+	(9917, 102, 'Metabo', 'AllenWrench'),
+	(9918, 103, 'Tungsteen', 'MitreSaw'),
+	(9919, 104, 'Apache', 'WeedWacker'),
+	(9920, 105, 'Ryder', 'HandChisel');
+
+INSERT INTO tool_condition
+(tool_condition_id, tool_condition)
+VALUES	(3301, 'NEW'),
+	(3302, 'AVG'),
+	(3303, 'INOR');
+
+INSERT INTO tool
+(tool_id, tool_detail_id, tool_condition_id)
+VALUES	(1101, 9901, 3301),
+	(1102, 9902, 3302),
+	(1103, 9903, 3303),
+	(1104, 9904, 3301),
+	(1105, 9905, 3302),
+	(1106, 9906, 3303),
+	(1107, 9907, 3301),
+	(1108, 9908, 3302),
+	(1109, 9909, 3303),
+	(1110, 9910, 3301),
+	(1111, 9911, 3302),
+	(1112, 9912, 3303),
+	(1113, 9913, 3301),
+	(1114, 9914, 3302),
+	(1115, 9915, 3303),
+	(1116, 9916, 3301),
+	(1117, 9917, 3302),
+	(1118, 9918, 3303),
+	(1119, 9919, 3301),
+	(1120, 9920, 3302);
+
+INSERT INTO rented
+(user_id, tool_id, start_date, due_date, rental_status)
+VALUES	(0001, 1101, '2020-01-01', '2020-02-01', 1),
+	(0002, 1102, '2020-01-01', '2020-02-01', 1),
+	(0003, 1103, '2020-01-01', '2020-02-01', 1),
+	(0004, 1104, '2020-01-01', '2020-02-01', 1),
+	(0005, 1105, '2020-01-01', '2020-02-01', 1),
+	(0006, 1106, '2020-01-01', '2020-02-01', 1),
+	(0007, 1107, '2020-01-01', '2020-02-01', 1),
+	(0008, 1108, '2020-01-01', '2020-02-01', 1),
+	(0009, 1109, '2020-01-01', '2020-02-01', 1),
+	(0010, 1110, '2020-01-01', '2020-02-01', 1),
+	(0011, 1111, '2020-01-01', '2020-02-01', 1),
+	(0012, 1112, '2020-01-01', '2020-02-01', 1),
+	(0013, 1113, '2020-01-01', '2020-02-01', 1),
+	(0014, 1114, '2020-01-01', '2020-02-01', 1),
+	(0015, 1115, '2020-01-01', '2020-02-01', 1),
+	(0016, 1116, '2020-01-01', '2020-02-01', 1),
+	(0017, 1117, '2020-01-01', '2020-02-01', 1),
+	(0018, 1118, '2020-01-01', '2020-02-01', 1),
+	(0019, 1119, '2020-01-01', '2020-02-01', 1),
+	(0020, 1120, '2020-01-01', '2020-02-01', 1);
+
