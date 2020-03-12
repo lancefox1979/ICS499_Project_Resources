@@ -1,6 +1,7 @@
 /* Create Database Rented - NEED NOT NULL STATEMENTS FOR VITAL ID'S */
 CREATE TABLE user(
-user_id int
+user_id int,
+PRIMARY KEY (user_id)
 );
 
 CREATE INDEX IDX_user_id
