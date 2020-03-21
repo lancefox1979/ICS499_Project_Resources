@@ -13,7 +13,7 @@ tool_classification varchar(50),
 tool_brand varchar(50),
 trade_name varchar(50),
 tool_condition varchar(50),
-tool_status varchar(50),
+tool_status varchar(50) DEFAULT 'active',
 PRIMARY KEY (tool_id)
 );
 
@@ -24,7 +24,7 @@ CREATE TABLE rental(
 rental_id int auto_increment,
 user_id int,
 tool_id int,
-start_date date, 
+start_date date,
 due_date date,
 rental_status varchar(50),
 PRIMARY KEY (rental_id),
