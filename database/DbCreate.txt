@@ -1,19 +1,19 @@
 /* Create Database Rented - NEED NOT NULL STATEMENTS FOR VITAL ID'S */
 CREATE TABLE user(
-user_id int
+user_id int,
+PRIMARY KEY (user_id)
 );
 
 CREATE INDEX IDX_user_id
 ON user (user_id);
 
-
 CREATE TABLE tool(
-tool_id int,
+tool_id int auto_increment,
 tool_classification varchar(50),
 tool_brand varchar(50),
 trade_name varchar(50),
 tool_condition varchar(50),
-tool_price decimal(6,2),
+tool_status varchar(50) DEFAULT 'active',
 PRIMARY KEY (tool_id)
 );
 
@@ -21,15 +21,16 @@ CREATE INDEX IDX_tool_id
 ON tool (tool_id);
 
 CREATE TABLE rental(
+rental_id int auto_increment,
 user_id int,
 tool_id int,
-start_date date, 
+start_date date,
 due_date date,
-rental_status int,
-PRIMARY KEY (user_id, tool_id),
+rental_status varchar(50),
+PRIMARY KEY (rental_id),
 FOREIGN KEY (user_id) REFERENCES user(user_id),
 FOREIGN KEY (tool_id) REFERENCES tool(tool_id)
 );
 
 CREATE INDEX IDX_rental
-ON rental (user_id, tool_id);
+ON rental (rental_id);
