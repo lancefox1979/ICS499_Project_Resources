@@ -23,15 +23,21 @@ ON tool (tool_id);
 
 CREATE TABLE rental(
 rental_id int auto_increment,
+asp_net_user_id varchar(255),
 user_id int,
 tool_id int,
 start_date date,
 due_date date,
 rental_status varchar(50),
 PRIMARY KEY (rental_id),
+FOREIGN KEY (asp_net_user_id) REFERENCES AspNetUsers(Id),
 FOREIGN KEY (user_id) REFERENCES user(user_id),
 FOREIGN KEY (tool_id) REFERENCES tool(tool_id)
 );
 
 CREATE INDEX IDX_rental
 ON rental (rental_id);
+
+/* If we want to user normalized user name for rental rather than id
+ALTER TABLE AspNetUsers MODIFY NormalizedUserName varchar(255) NOT NULL UNIQUE;
+*/
