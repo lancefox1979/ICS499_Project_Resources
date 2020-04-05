@@ -14,6 +14,7 @@ tool_brand varchar(50),
 trade_name varchar(50),
 tool_condition varchar(50),
 tool_status varchar(50) DEFAULT 'active',
+tool_price decimal(6,2),
 PRIMARY KEY (tool_id)
 );
 
