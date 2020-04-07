@@ -9,12 +9,14 @@ ON user (user_id);
 
 CREATE TABLE tool(
 tool_id int auto_increment,
-tool_classification varchar(50),
+tool_type varchar(50),
 tool_brand varchar(50),
 trade_name varchar(50),
 tool_condition varchar(50),
 tool_status varchar(50) DEFAULT 'active',
 tool_price decimal(6,2),
+tool_last_updated datetime,
+tool_updated_by varchar(50),
 PRIMARY KEY (tool_id)
 );
 
