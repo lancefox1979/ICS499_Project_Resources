@@ -1,0 +1,35 @@
++---------+------------+----------------+--------------------+----------------+-------------+------------+---------------------+---------------------+
+| tool_id | tool_type  | tool_brand     | trade_name         | tool_condition | tool_status | tool_price | tool_last_updated   | tool_updated_by     |
++---------+------------+----------------+--------------------+----------------+-------------+------------+---------------------+---------------------+
+|       1 | Hammer     | SnapOn         | Claw Hammer        | NEW            | active      |       5.99 | 2020-04-19 13:05:22 | ortiza              |
+|       2 | Wrench     | MatCO          | Crescent Wrench    | AVG            | inactive    |       6.99 | 2020-04-07 02:01:13 | SA_ToolRentalSystem |
+|       3 | Saw        | Ideal          | Demo Saw           | INOR           | active      |       7.99 | 2020-04-11 23:06:14 | harperd             |
+|       4 | Power      | Dewalt         | Router             | NEW            | inactive    |       8.99 | 2020-04-11 22:52:17 | harperd             |
+|       5 | Chisel     | Hitachi        | Hand Chisel        | AVG            | inactive    |       5.99 | 2020-04-07 02:01:13 | SA_ToolRentalSystem |
+|       6 | Hammer     | Ideal          | Mallet             | INOR           | inactive    |       6.99 | 2020-04-07 02:01:13 | SA_ToolRentalSystem |
+|       7 | Wrench     | SnapOn         | Crescent Wrench    | AVG            | active      |       5.99 | 2020-04-11 23:03:06 | harperd             |
+|       8 | Saw        | SnapOn         | Band Saw           | AVG            | active      |       6.99 | 2020-04-07 02:01:13 | SA_ToolRentalSystem |
+|       9 | Power      | BlackAndDecker | Drill              | INOR           | inactive    |       7.99 | 2020-04-07 02:01:13 | SA_ToolRentalSystem |
+|      10 | Chisel     | IRWIN          | Trowel             | NEW            | active      |       8.99 | 2020-04-07 02:01:13 | SA_ToolRentalSystem |
+|      11 | Hammer     | United         | Finish Hammer      | AVG            | active      |       9.99 | 2020-04-07 02:01:13 | SA_ToolRentalSystem |
+|      12 | Wrench     | ToolCO         | Spud Wrench        | INOR           | inactive    |       6.99 | 2020-04-07 02:01:13 | SA_ToolRentalSystem |
+|      13 | Saw        | SnapOn         | Hand Saw           | NEW            | active      |       7.99 | 2020-04-07 02:01:13 | SA_ToolRentalSystem |
+|      14 | Power      | Ideal          | Impact Wrench      | AVG            | active      |       6.99 | 2020-04-07 02:01:13 | SA_ToolRentalSystem |
+|      15 | Chisel     | Chevron        | Hand Chisel        | INOR           | inactive    |       8.99 | 2020-04-07 02:01:13 | SA_ToolRentalSystem |
+|      16 | Hammer     | Metabo         | Ball Peen Hammer   | NEW            | active      |       9.99 | 2020-04-07 02:01:13 | SA_ToolRentalSystem |
+|      17 | Wrench     | Metabo         | Allen Wrench       | AVG            | active      |       6.99 | 2020-04-07 02:01:13 | SA_ToolRentalSystem |
+|      18 | Saw        | Tungsteen      | Mitre Saw          | INOR           | inactive    |       7.99 | 2020-04-07 02:01:13 | SA_ToolRentalSystem |
+|      19 | Power      | Apache         | Weed Whacker       | NEW            | active      |       9.99 | 2020-04-07 02:01:13 | SA_ToolRentalSystem |
+|      20 | Chisel     | Ryder          | Hand Chisel        | AVG            | active      |       8.99 | 2020-04-07 02:01:13 | SA_ToolRentalSystem |
+|      22 | Hammer     | United         | Finish Hammer      | NEW            | active      |       NULL | 2020-04-10 17:29:50 | garretts            |
+|      23 | Safety/PPE | 3M             | Hard Hat(TieDye)   | NEW            | active      |       NULL | 2020-04-12 19:50:15 | harperd             |
+|      24 | Magical    | Nidavellirian  | Infinity Gauntlet  | NEW            | active      |       NULL | 2020-04-15 21:11:33 | fishers             |
+|      25 | Power      | Mississippi    | Circular Saw       | NEW            | active      |       NULL | 2020-04-17 23:40:54 | harperd             |
+|      26 | Magical    | Peverell       | Elder Wand         | NEW            | active      |       NULL | 2020-04-17 23:43:05 | harperd             |
+|      27 | Safety/PPE | 3M             | Hard Hat(CocaCola) | AVG            | active      |       NULL | 2020-04-18 00:05:23 | harperd             |
+|      28 | Safety/PPE | 3M             | M95(Mask)          | NEW            | active      |       NULL | 2020-04-19 13:31:46 | ortiza              |
+|      29 | Safety/PPE | 3M             | n95(Green)         | USED           | active      |       NULL | 2020-04-26 14:20:03 | harperd             |
+|      30 | Hammar     | Snaps          | Mallet             | AVG            | active      |       4.55 | 2020-04-26 14:25:38 | ortiza              |
+|      31 | Safety/PPE | 3M             | Hard Hat(Green)    | NEW            | active      |      10.00 | 2020-04-29 17:47:39 | harperd             |
+|      32 | Safety/PPE | 3M             | Hard Hat(Packers)  | NEW            | active      |      20.00 | 2020-04-29 18:49:01 | harperd             |
++---------+------------+----------------+--------------------+----------------+-------------+------------+---------------------+---------------------+
